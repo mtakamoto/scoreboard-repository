@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1 class="title" id="scoreboardTitle">Real Time Scores</h1>
+        </header>
+
+        <div class="timer-section">
+            <div class="timer" id="timerLabel" aria-live="polite">24:00.00</div>
+            <div class="controls timer-controls">
+                <button class="button timer-button" id="increaseMinutesButton" aria-label="Increase Minutes">
+                    <img src="up-arrow.svg" alt="Increase Minutes">
+                </button>
+                <button class="button timer-button" id="decreaseMinutesButton" aria-label="Decrease Minutes">
+                    <img src="down-arrow.svg" alt="Decrease Minutes">
+                </button>
+                <button class="button timer-button" id="increaseSecondsButton" aria-label="Increase Seconds">
+                    <img src="up-arrow.svg" alt="Increase Seconds">
+                </button>
+                <button class="button timer-button" id="decreaseSecondsButton" aria-label="Decrease Seconds">
+                    <img src="down-arrow.svg" alt="Decrease Seconds">
+                </button>
+            </div>
+        </div>
+
+        <button class="button toggle-button" id="toggleButton" data-running="false">
+            <img src="play-button.svg" alt="Start">
+        </button>
+
+        <form class="teams-section">
+            <div class="team">
+                <div class="score" id="team1Score" aria-live="polite">0</div>
+                <div class="score-controls">
+                    <button class="button score-button" id="increaseTeam1Button" aria-label="Increase Team 1 Score">
+                        <img src="up-arrow.svg" alt="Increase Team 1 Score">
+                    </button>
+                    <button class="button score-button" id="decreaseTeam1Button" aria-label="Decrease Team 1 Score">
+                        <img src="down-arrow.svg" alt="Decrease Team 1 Score">
+                    </button>
+                </div>
+                <label for="team1Name">Home:</label>
+                <input type="text" class="team-name-input" id="team1Name" value="Team 1" placeholder="Enter Team Name">
+            </div>
+
+            <div class="team">
+                <div class="score" id="team2Score" aria-live="polite">0</div>
+                <div class="score-controls">
+                    <button class="button score-button" id="increaseTeam2Button" aria-label="Increase Team 2 Score">
+                        <img src="up-arrow.svg" alt="Increase Team 2 Score">
+                    </button>
+                    <button class="button score-button" id="decreaseTeam2Button" aria-label="Decrease Team 2 Score">
+                        <img src="down-arrow.svg" alt="Decrease Team 2 Score">
+                    </button>
+                </div>
+                <label for="team2Name">Guest:</label>
+                <input type="text" class="team-name-input" id="team2Name" value="Team 2" placeholder="Enter Team Name">
+            </div>
+        </form>
+
+        <button class="button reset-button" id="resetButton">Reset</button>
+
+        <!-- Color Palette -->
+        <div class="color-palette">
+            <div class="color-option" data-color="#f00707"></div>
+            <div class="color-option" data-color="#f08707"></div>
+            <div class="color-option" data-color="#f0e407"></div>
+            <div class="color-option" data-color="#00ff00"></div>
+            <div class="color-option" data-color="#10ebb8"></div>
+            <div class="color-option" data-color="#35adf2"></div>
+            <div class="color-option" data-color="#9818ed"></div>
+            <div class="color-option" data-color="#ed07ac"></div>
+        </div>
+
+
+    </main>
+    <script src="script.js"></script>
+    <audio id="buzzer" src="buzzer.mp3" preload="auto"></audio>
+</body>
+
+</html>
